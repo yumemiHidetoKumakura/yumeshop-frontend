@@ -2,7 +2,7 @@ import { VFC } from 'react';
 import styled from 'styled-components';
 import { colors, breakPoints } from 'src/styles/Tokens';
 
-interface CardSimpleProps {
+type CardSimpleProps = {
   imageUrl: string;
   text: string;
 }
