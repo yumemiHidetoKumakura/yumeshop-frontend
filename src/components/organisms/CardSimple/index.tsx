@@ -40,7 +40,9 @@ export const CardSimple: VFC<CardSimpleProps> = (props) => {
 
   return (
     <Wrapper>
-      <img src={imageUrl} alt="" />
+      <picture>
+        <img src={imageUrl} alt="" />
+      </picture>
       <p>{text}</p>
     </Wrapper>
   );
