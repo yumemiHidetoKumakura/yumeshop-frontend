@@ -21,14 +21,13 @@ const Wrapper = styled.section`
   div {
     display: flex;
     padding-bottom: 0px;
+    align-items: center;
     p {
       padding: 8px;
       width: auto;
       font-weight: 700;
       font-size: 14px;
-      line-height: 16px;
       display: flex;
-      align-items: center;
     }
   }
   @media screen and (min-width: ${breakPoints.tbDisplaySize}) {
