@@ -27,7 +27,6 @@ const Wrapper = styled.section<{isDiscount: boolean}>`
   .card-detail-text {
     display: flex;
     flex-direction: column;
-    background: #ddf4b2;
     padding: 8px;
     border-radius: 0px 8px 8px 0px;
     position: relative;
