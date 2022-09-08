@@ -4,17 +4,16 @@ import { colors, breakPoints } from 'src/styles/Tokens';
 import { Tag } from 'src/openapi/generated/typescript-fetch/models/Tag';
 import { Tags } from 'src/components/organisms/Tags/index';
 
-
 export type CardDetailProps = {
-  selling_price: number,
-  original_price?: number,
-  discount_percentage?: number,
-  tags: Tag[],
-  text: string,
-  imageUrl: string
-}
+  sellingPrice: number;
+  originalPrice?: number;
+  discountPercentage?: number;
+  tags: Tag[];
+  text: string;
+  imageUrl: string;
+};
 
-const Wrapper = styled.section<{isDiscount: boolean}>`
+const Wrapper = styled.section<{ isDiscount: boolean }>`
   display: flex;
   align-items: stretch;
   img {
@@ -56,10 +55,10 @@ const Wrapper = styled.section<{isDiscount: boolean}>`
   }
   .selling_price {
     font-size: 24px;
-    color: ${props => (props.isDiscount ? 'red' : 'black')};
+    color: ${(props) => (props.isDiscount ? 'red' : 'black')};
   }
   .yen {
-    color: ${props => (props.isDiscount ? 'red' : 'black')};
+    color: ${(props) => (props.isDiscount ? 'red' : 'black')};
   }
   .original_price {
     color: ${colors.Gray};
@@ -92,40 +91,35 @@ const Wrapper = styled.section<{isDiscount: boolean}>`
 `;
 
 export const CardDetail: VFC<CardDetailProps> = (props) => {
-  const { selling_price, original_price, discount_percentage, tags, text, imageUrl } = props;
+  const {
+    sellingPrice,
+    originalPrice,
+    discountPercentage,
+    tags,
+    text,
+    imageUrl,
+  } = props;
 
   return (
-    <Wrapper isDiscount={original_price != null}>
-      <div className='picture-area'>
+    <Wrapper isDiscount={originalPrice != null}>
+      <div className="picture-area">
         <picture>
           <img src={imageUrl} alt="" />
         </picture>
-        {original_price &&
-          <div>
-            {discount_percentage}%OFF
-          </div>
-        }
+        {originalPrice && <div>{discountPercentage}%OFF</div>}
       </div>
-      <div className='card-detail-text'>
-        <p>{ text }</p>
-        <div className='tag-area'>
+      <div className="card-detail-text">
+        <p>{text}</p>
+        <div className="tag-area">
           <Tags items={tags} />
         </div>
-        <div className='price'>
-          <span>
-            税別
-          </span>
-          {original_price && 
-            <div className='original_price'>
-                {original_price}→
-            </div>
-          }
-          <div className='selling_price'>
-            {selling_price}
-          </div>
-          <span className='yen'>
-            円
-          </span>
+        <div className="price">
+          <span>税別</span>
+          {originalPrice && (
+            <div className="original_price">{originalPrice}→</div>
+          )}
+          <div className="selling_price">{sellingPrice}</div>
+          <span className="yen">円</span>
         </div>
       </div>
     </Wrapper>

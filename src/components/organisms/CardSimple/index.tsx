@@ -5,7 +5,7 @@ import { colors, breakPoints } from 'src/styles/Tokens';
 type CardSimpleProps = {
   imageUrl: string;
   text: string;
-}
+};
 
 const Wrapper = styled.section`
   font-size: 12px;

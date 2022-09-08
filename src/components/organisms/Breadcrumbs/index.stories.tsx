@@ -7,10 +7,10 @@ export default {
 } as Meta;
 
 const props = [
-  { link_url: "a", text: "a" },
-  { link_url: "aaaa", text: "aaaa" },
-  { link_url: "bbbb", text: "bbbb" },
-  { text: "none" }
+  { link_url: 'a', text: 'a' },
+  { link_url: 'aaaa', text: 'aaaa' },
+  { link_url: 'bbbb', text: 'bbbb' },
+  { text: 'none' },
 ];
 
 const Template: Story = () => <Breadcrumbs items={props} />;
