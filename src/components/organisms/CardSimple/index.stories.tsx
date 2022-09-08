@@ -3,7 +3,7 @@ import { CardSimple } from "./index";
 
 export default {
   component: CardSimple,
-  title: "organisms/CardSimple",
+  title: "organisms/Cardsimple",
 } as Meta;
 
 const props = {

@@ -5,7 +5,7 @@ import { TagGroup } from 'src/openapi/generated/typescript-fetch/models/TagGroup
 
 export default {
   component: CardWide,
-  title: 'organisms/CardWide',
+  title: 'organisms/Cardwide',
 } as Meta;
 
 const props = {
