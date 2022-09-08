@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { fonts } from './Tokens';
+import { colors, fonts } from './Tokens';
 import 'ress';
 
 export default createGlobalStyle`
@@ -9,6 +9,7 @@ export default createGlobalStyle`
     margin: 0;
     font-family: ${fonts['NotoSansJP']};
     line-height: 1.5;
+    background-color: ${colors.YumeWhiteGreen};
   }
 
   a {
