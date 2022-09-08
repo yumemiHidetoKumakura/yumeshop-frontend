@@ -5,7 +5,7 @@ import { Tag } from 'src/openapi/generated/typescript-fetch/models/Tag';
 import { Tags } from 'src/components/organisms/Tags/index';
 
 
-type CardDetailProps = {
+export type CardDetailProps = {
   selling_price: number,
   original_price?: number,
   discount_percentage?: number,
@@ -27,12 +27,14 @@ const Wrapper = styled.section<{isDiscount: boolean}>`
   .card-detail-text {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     padding: 8px;
     border-radius: 0px 8px 8px 0px;
     position: relative;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
+    background-color: ${colors.White};
     > p {
       line-height: 20px;
       height: 4em;
