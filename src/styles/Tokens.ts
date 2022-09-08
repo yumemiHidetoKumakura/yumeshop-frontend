@@ -42,4 +42,5 @@ export const fonts = {
 
 export const breakPoints = {
   pcDisplaySize: '1152px',
+  tbDisplaySize: '768px',
 } as const;
