@@ -5,10 +5,10 @@ import { Tag } from 'src/openapi/generated/typescript-fetch/models/Tag';
 import { Tags } from 'src/components/organisms/Tags/index';
 
 type CardWideProps = {
-  date: string,
-  tags: Tag[],
-  text: string,
-}
+  date: string;
+  tags: Tag[];
+  text: string;
+};
 
 const Wrapper = styled.section`
   font-size: 12px;
@@ -50,10 +50,10 @@ export const CardWide: VFC<CardWideProps> = (props) => {
   return (
     <Wrapper>
       <div>
-        <p>{ date }</p>
+        <p>{date}</p>
         <Tags items={tags} />
       </div>
-      <p>{ text }</p>
+      <p>{text}</p>
     </Wrapper>
   );
 };

@@ -29,7 +29,7 @@ const Wrapper = styled.footer`
     }
   }
 `;
-  
+
 const Copyright = styled.p`
   margin-top: 64px;
   text-align: center;

@@ -6,8 +6,8 @@ type BreadcrumbsProps = {
   items: {
     link_url?: string;
     text: string;
-  }[]
-}
+  }[];
+};
 
 const Wrapper = styled.div`
   width: 100%;
@@ -49,8 +49,14 @@ const Wrapper = styled.div`
 export const Breadcrumbs: VFC<BreadcrumbsProps> = ({ items }) => (
   <Wrapper>
     <ul>
-      {items.slice(0, items.length - 1).map(item => <li key={item.link_url}><a href={item.link_url}>{item.text}</a></li>)}
-      <li><span>{items[items.length - 1].text}</span></li>
+      {items.slice(0, items.length - 1).map((item) => (
+        <li key={item.link_url}>
+          <a href={item.link_url}>{item.text}</a>
+        </li>
+      ))}
+      <li>
+        <span>{items[items.length - 1].text}</span>
+      </li>
     </ul>
   </Wrapper>
 );
