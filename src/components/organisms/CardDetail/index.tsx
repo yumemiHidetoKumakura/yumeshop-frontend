@@ -89,7 +89,7 @@ const Wrapper = styled.section<{isDiscount: boolean}>`
   }
 `;
 
-export const CardWide: VFC<CardDetailProps> = (props) => {
+export const CardDetail: VFC<CardDetailProps> = (props) => {
   const { selling_price, original_price, discount_percentage, tags, text, imageUrl } = props;
 
   return (

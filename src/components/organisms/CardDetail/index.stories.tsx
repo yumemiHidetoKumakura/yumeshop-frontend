@@ -1,11 +1,11 @@
 import type { Meta, Story } from '@storybook/react/types-6-0';
-import { CardWide } from './index';
+import { CardDetail } from './index';
 import { colors } from 'src/styles/Tokens';
 import { TagGroup } from 'src/openapi/generated/typescript-fetch/models/TagGroup';
 
 export default {
-  component: CardWide,
-  title: 'organisms/CardWide',
+  component: CardDetail,
+  title: 'organisms/Carddetail',
 } as Meta;
 
 const props = {
@@ -62,8 +62,8 @@ const discount_props = {
   imageUrl: "https://www.yumemi.co.jp/images/logo_yumemi_02.svg"
 }
 
-const Template: Story = () => <CardWide {...props} />;
-const Discount: Story = () => <CardWide {...discount_props} />;
+const Template: Story = () => <CardDetail {...props} />;
+const Discount: Story = () => <CardDetail {...discount_props} />;
 
-export const cardwide = Template.bind({});
-export const cardwidediscount = Discount.bind({});
+export const carddetail = Template.bind({});
+export const carddetaildiscount = Discount.bind({});
